@@ -45,144 +45,314 @@
 	
 		<!-- ////////////Content Box 01 -->
 		<section class="box-content box-1">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
+			<div class="container" id="app">
+				
+				
+				<div class="row" v-show="search.show">
+					<div class="col-md-12">
 						<div class="box-item">
-							
 							<div class="content">
-								<h3>Pellentesque vehicula</h3>
-								
 								<ul class="list-group">
-								  <li class="list-group-item">
-								    <span class="label label-success btn-fr btn" data-clipboard-text="小程序1">复制</span>
-								   	小程序1
-								  </li>
-								  <li class="list-group-item">
-								    <span class="label label-success btn-fr btn" data-clipboard-text="小程序2">复制</span>
-								   	小程序2
-								  </li>
-								  <li class="list-group-item">
-								    <span class="label label-success btn-fr btn" data-clipboard-text="小程序3">复制</span>
-								   	小程序3
-								  </li>
-								  <li class="list-group-item">
-								    <span class="label label-success btn-fr btn" data-clipboard-text="小程序4">复制</span>
-								   	小程序4
-								  </li>
-								  <li class="list-group-item">
-								    <span class="label label-success btn-fr btn" data-clipboard-text="小程序5">复制</span>
-								   	小程序5
+								  <li v-for="item in search.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
 								  </li>
 								</ul>
-								
-								
-							</div>
-							
-						</div>
-						<div class="box-item">
-							<div class="content">
-								<h3>Planning Our Honeymoon</h3>
-								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
-							</div>
-						</div>
-						<div class="box-item">
-							<div class="content">
-								<h3>Brainstorming Wedding Ideas</h3>
-								<p>Suspendisse porttitor. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis, viverra feugiat ipsum volutpat vitae. Fusce justo turpis, sodales sed placerat non, suscipit at diam.</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
-							</div>
-						</div>
-						<div class="box-item">
-							<div class="content">
-								<h3>Choosing The Bridesmaids and Groomsmen</h3>
-								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
 							</div>
 						</div>
 					</div>
+				</div>
+				
+				<div class="row">
+					
+						<!-- //////////// 第一列 ///////////-->
 					<div class="col-md-4">
 						<div class="box-item">
 							<div class="content">
-								<h3>Donec bibendum orci</h3>
-								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
+								<h3>{{gpsy.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in gpsy.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
 							</div>
 						</div>
 						<div class="box-item">
 							<div class="content">
-								<h3>Met Dovey’s Parents in Chicago</h3>
-								<p>Class aptent taciti urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
+								<h3>{{jt.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in jt.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
 							</div>
 						</div>
 						<div class="box-item">
 							<div class="content">
-								<h3>Choosing The Bridesmaids and Groomsmen</h3>
-								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
+								<h3>{{gj.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in gj.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
 							</div>
 						</div>
 						<div class="box-item">
 							<div class="content">
-								<h3>She Said Yes!</h3>
-								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
+								<h3>{{tqcx.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in tqcx.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
 							</div>
 						</div>
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{yd.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in yd.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
+						
+						
 					</div>
+					
+					
+					
+					
+					
+					<!-- //////////// 第二列 ///////////-->
 					<div class="col-md-4">
 						<div class="box-item">
 							<div class="content">
-								<h3>Choosing The Bridesmaids and Groomsmen</h3>
-								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
+								<h3>{{lx.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in lx.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
 							</div>
 						</div>
 						<div class="box-item">
 							<div class="content">
-								<h3>She Said Yes!</h3>
-								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
+								<h3>{{jkyl.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in jkyl.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
 							</div>
 						</div>
 						<div class="box-item">
 							<div class="content">
-								<h3>A Sweet Escape to Paris</h3>
-								<p>Proin lobortis mattis odio non ornare. Sed tempor nisi eu hendrerit luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostravelit id sem tincidunt convallis ac eget quam. Vestibulum posuere porttitor sapien .</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
+								<h3>{{jypx.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in jypx.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
 							</div>
 						</div>
 						<div class="box-item">
 							<div class="content">
-								<h3>Met Dovey’s Parents in Chicago</h3>
-								<p>Class aptent taciti urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
-								<a href="single.html">Read More...</a>
-								<br><br>
-								<span>MAY 21, 2014 BY VAFPRESS</span><br>
+								<h3>{{tzlc.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in tzlc.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
 							</div>
 						</div>
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{sp.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in sp.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{ty.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in ty.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{qz.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in qz.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{sq.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in sq.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					<!-- //////////// 第三列 ///////////-->
+					<div class="col-md-4">
+						<div class="box-item">
+							<div class="content">
+								<h3>{{gw.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in gw.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						<div class="box-item">
+							<div class="content">
+								<h3>{{tp.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in tp.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						<div class="box-item">
+							<div class="content">
+								<h3>{{kdcx.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in kdcx.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						<div class="box-item">
+							<div class="content">
+								<h3>{{pw.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in pw.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{ms.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in ms.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{bqb.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in bqb.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{yp.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in yp.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>	
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{mz.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in mz.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{yx.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in yx.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="box-item">
+							<div class="content">
+								<h3>{{zmt.classif}}</h3>
+								<ul class="list-group">
+								  <li v-for="item in zmt.items" class="list-group-item">
+								    <span class="label label-success btn-fr btn" :data-clipboard-text="item">复制</span>
+								   	{{item}}
+								  </li>
+								</ul>
+							</div>
+						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -196,6 +366,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/snackbar.min.js"></script>
 	<script src="js/clipboard.min.js"></script>
+	<script src="js/vue.min.js"></script>
 	<script src="js/script.js"></script>
 	
 </body>
